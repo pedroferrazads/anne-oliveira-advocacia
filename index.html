@@ -369,18 +369,32 @@ img{max-width:100%;display:block}
 .contato-item b{display:block;font-size:1.05rem;color:var(--text-light);font-weight:600;line-height:1.25}
 .contato-item span{font-size:.9rem;color:var(--muted-light)}
 .contato .btn{margin-top:8px}
-.phone{justify-self:center;width:300px;max-width:100%;background:var(--ink);border-radius:40px;padding:12px;box-shadow:0 44px 90px -34px rgba(20,7,12,.6),inset 0 0 0 2px rgba(198,161,91,.16)}
-.phone-inner{background:#0f0d0e;border-radius:30px;overflow:hidden}
-.phone-top{background:var(--wine);padding:15px 16px;display:flex;align-items:center;gap:12px}
-.phone-top .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(150deg,var(--gold-soft),var(--gold-deep));display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:700;color:var(--wine-900);font-size:1.05rem}
-.phone-top b{color:#fff;font-size:.92rem;display:block;line-height:1.2}
-.phone-top span{color:rgba(255,255,255,.7);font-size:.72rem}
-.phone-chat{padding:18px 14px;display:flex;flex-direction:column;gap:9px;min-height:360px;background-color:#100e0f;background-image:radial-gradient(rgba(198,161,91,.06) 1px,transparent 1px);background-size:15px 15px}
-.bubble{max-width:82%;padding:9px 12px;border-radius:14px;font-size:.8rem;line-height:1.42}
-.bubble .tm{display:block;font-size:.6rem;opacity:.55;margin-top:3px;text-align:right}
-.bubble.them{align-self:flex-start;background:#fff;color:#14100F;border-bottom-left-radius:4px}
-.bubble.me{align-self:flex-end;background:var(--gold-soft);color:var(--wine-900);border-bottom-right-radius:4px}
-.phone-cap{text-align:center;font-size:.72rem;color:var(--muted-light);margin-top:14px;opacity:.8}
+.phone{justify-self:center;width:300px;max-width:100%;position:relative;background:#111214;border-radius:48px;padding:11px;box-shadow:0 46px 92px -34px rgba(20,7,12,.6),inset 0 0 0 2px #2a2a2c,0 0 0 1px #000}
+.phone::before{content:"";position:absolute;top:22px;left:50%;transform:translateX(-50%);width:92px;height:25px;background:#000;border-radius:14px;z-index:6}
+.phone-screen{border-radius:38px;overflow:hidden;background:#ECE5DD;position:relative}
+.wa-head{background:#075E54;color:#fff}
+.wa-status{display:flex;justify-content:space-between;align-items:center;padding:9px 20px 3px;font-size:.64rem;font-weight:700;letter-spacing:.02em}
+.wa-status .r{display:inline-flex;align-items:center;gap:4px}
+.wa-status svg{height:11px;fill:#fff}
+.wa-bar{display:flex;align-items:center;gap:9px;padding:4px 12px 11px}
+.wa-bar .back{font-size:1.35rem;line-height:1;color:#fff;margin-right:-3px}
+.wa-bar .av{width:33px;height:33px;border-radius:50%;background:linear-gradient(150deg,var(--gold-soft),var(--gold-deep));display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:700;color:var(--wine-900);font-size:.85rem;flex:none}
+.wa-bar .nm{flex:1;min-width:0}
+.wa-bar .nm b{font-size:.84rem;display:block;line-height:1.15;font-weight:600}
+.wa-bar .nm span{font-size:.66rem;color:rgba(255,255,255,.82)}
+.wa-bar .ic{display:inline-flex;gap:16px}
+.wa-bar .ic svg{width:17px;height:17px;fill:#fff}
+.wa-chat{padding:14px 11px 10px;min-height:322px;display:flex;flex-direction:column;gap:7px;background:#ECE5DD}
+.wa-msg{max-width:85%;padding:6px 9px 5px;border-radius:8px;font-size:.75rem;line-height:1.36;color:#111b21;box-shadow:0 1px .6px rgba(11,20,26,.13)}
+.wa-msg .tm{font-size:.56rem;color:#667781;float:right;margin:6px 0 -1px 10px;white-space:nowrap}
+.wa-msg .tm .ck{color:#34B7F1;font-size:.7rem;letter-spacing:-4px;margin-left:4px}
+.wa-msg.them{align-self:flex-start;background:#fff;border-top-left-radius:1px}
+.wa-msg.me{align-self:flex-end;background:#DCF8C6;border-top-right-radius:1px}
+.wa-input{display:flex;align-items:center;gap:7px;padding:7px 9px 9px;background:#F0F2F5}
+.wa-input .box{flex:1;background:#fff;border-radius:18px;padding:8px 13px;font-size:.72rem;color:#8696a0}
+.wa-input .send{width:33px;height:33px;border-radius:50%;background:#00A884;display:grid;place-items:center;flex:none}
+.wa-input .send svg{width:15px;height:15px;fill:#fff}
+.phone-cap{text-align:center;font-size:.72rem;color:var(--muted-light);margin-top:16px;opacity:.8}
 
 /* ============================== RESPONSIVE ============================== */
 @media (max-width:980px){
@@ -742,14 +756,36 @@ img{max-width:100%;display:block}
       </div>
       <div class="reveal d1">
         <div class="phone">
-          <div class="phone-inner">
-            <div class="phone-top"><span class="av">AO</span><div><b>Dra. Anne Oliveira</b><span>online agora</span></div></div>
-            <div class="phone-chat">
-              <div class="bubble me">Dra. Anne, meu irmão foi preso em flagrante agora à noite. O que eu faço?<span class="tm">21:34</span></div>
-              <div class="bubble them">Olá. Primeiro, mantenha a calma. Me diga o nome completo dele e em qual delegacia está.<span class="tm">21:35</span></div>
-              <div class="bubble me">Ele está na delegacia central, aqui em Itapetinga.<span class="tm">21:36</span></div>
-              <div class="bubble them">Certo. Vou te orientar sobre a audiência de custódia e os próximos passos, com total sigilo.<span class="tm">21:37</span></div>
-              <div class="bubble them">Pode falar comigo por aqui a qualquer hora, inclusive agora.<span class="tm">21:37</span></div>
+          <div class="phone-screen">
+            <div class="wa-head">
+              <div class="wa-status">
+                <span>21:37</span>
+                <span class="r">
+                  <svg viewBox="0 0 18 12"><path d="M1 8.5h2.2V11H1zM5.4 6h2.2v5H5.4zM9.8 3.5h2.2V11H9.8zM14.2 1h2.2v10h-2.2z"/></svg>
+                  <svg viewBox="0 0 17 12"><path d="M8.5 2.4c2.3 0 4.4.9 6 2.4l1.2-1.4A11 11 0 0 0 8.5.6 11 11 0 0 0 1.3 3.4l1.2 1.4c1.6-1.5 3.7-2.4 6-2.4z"/><path d="M8.5 6c1.2 0 2.3.5 3.1 1.3l1.2-1.4A6.4 6.4 0 0 0 8.5 4a6.4 6.4 0 0 0-4.3 1.9l1.2 1.4A4.5 4.5 0 0 1 8.5 6z"/><circle cx="8.5" cy="9.4" r="1.5"/></svg>
+                  <svg viewBox="0 0 27 12"><rect x="1" y="1.6" width="22" height="8.8" rx="2.6" fill="none" stroke="#fff" stroke-width="1.3"/><rect x="2.8" y="3.4" width="16" height="5.2" rx="1"/><rect x="24.4" y="4.2" width="1.8" height="3.6" rx=".9"/></svg>
+                </span>
+              </div>
+              <div class="wa-bar">
+                <span class="back">&#8249;</span>
+                <span class="av">AO</span>
+                <span class="nm"><b>Dra. Anne Oliveira</b><span>online</span></span>
+                <span class="ic">
+                  <svg viewBox="0 0 24 24"><path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1z"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="wa-chat">
+              <div class="wa-msg me">Dra. Anne, meu irmão foi preso em flagrante agora à noite. O que eu faço?<span class="tm">21:34<span class="ck">&#10003;&#10003;</span></span></div>
+              <div class="wa-msg them">Olá. Primeiro, mantenha a calma. Me diga o nome completo dele e em qual delegacia está.<span class="tm">21:35</span></div>
+              <div class="wa-msg me">Ele está na delegacia central, aqui em Itapetinga.<span class="tm">21:36<span class="ck">&#10003;&#10003;</span></span></div>
+              <div class="wa-msg them">Certo. Vou te orientar sobre a audiência de custódia e os próximos passos, com total sigilo.<span class="tm">21:37</span></div>
+              <div class="wa-msg them">Pode falar comigo por aqui a qualquer hora, inclusive agora.<span class="tm">21:37</span></div>
+            </div>
+            <div class="wa-input">
+              <span class="box">Mensagem</span>
+              <span class="send"><svg viewBox="0 0 24 24"><path d="M2.5 3.3 21.5 12 2.5 20.7 4.8 13 14 12 4.8 11z"/></svg></span>
             </div>
           </div>
         </div>
